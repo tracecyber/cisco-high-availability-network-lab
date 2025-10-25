@@ -33,6 +33,7 @@ This lab provides a practical demonstration of a robust, fault-tolerant network 
 The network is built on a two-tier hierarchical model (Core and Access) and designed for complete redundancy.
 
 ![Network Topology](images/network-topology.png)
+
 _**Figure 1:** The dual-core network topology designed for High Availability._
 
 ### Technology & Component Stack
@@ -64,6 +65,7 @@ In its normal, fully operational state, the network logic is controlled by HSRP 
 **Verification Command:** `show standby brief` on `Core-SW1`. The output confirms its "Active" state.
 ![HSRP Verification](images/hsrp-verification_1.png)
 ![HSRP Verification](images/hsrp-verification_2.png)
+
 _**Figure 2:** HSRP status showing Core-SW1 as the Active router._
 
 ### 4.2. STP Verification (Loop-Free Topology)
@@ -71,6 +73,7 @@ _**Figure 2:** HSRP status showing Core-SW1 as the Active router._
 
 **Verification Command:** `show spanning-tree vlan 20` on `Access-SW`.
 ![STP Verification](images/stp-verification.png)
+
 _**Figure 3:** STP status on the Access Switch showing the path to Core-SW2 is intentionally blocked._
 
 ---
@@ -92,6 +95,7 @@ The network's redundancy protocols worked in concert to automatically restore se
 3.  **Connectivity Restored:** The continuous ping from the server resumed successfully after a brief interruption of only a few dropped packets. This confirms a near-seamless failover from the end-user's perspective.
 
 ![Failover Ping Test](images/failover-test.png)
+
 _**Figure 4:** The ping test shows connectivity is restored automatically after a minimal outage, proving the HA design works._
 
 ---
