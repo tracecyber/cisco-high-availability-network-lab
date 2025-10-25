@@ -37,7 +37,8 @@ The network is segmented into two VLANs for access and management traffic. HSRP 
 HSRP was configured to provide a virtual gateway. `Core-SW1` was set as the Active router with a higher priority (110), while `Core-SW2` acts as the Standby.
 
 **Verification command:** `show standby brief` on `Core-SW1`.
-![HSRP Verification](images/hsrp-verification.png)
+![HSRP Verification](images/hsrp-verification_1.png)
+![HSRP Verification](images/hsrp-verification_2.png)
 
 ### 2. STP for Loop Prevention
 `Core-SW1` was configured as the Root Bridge. STP on the `Access-SW` intelligently blocked the redundant path to `Core-SW2` to maintain a loop-free topology, keeping it on standby for failover.
